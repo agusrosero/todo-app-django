@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="d-grid gap-2 col-6 mx-auto">
+  <h1 class="text-center">To-Do App</h1>
+  <a class="btn btn-primary" href="{% url 'task_list' %}">List Task</a>
+  <a class="btn btn-primary" href="{% url 'add_task' %}">Add Task</a>
+</div>
+
+{% endblock %}

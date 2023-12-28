@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="d-grid gap-2 col-6 mx-auto">
+  <h1 class="fst-italic mt-4 text-center">Add Task</h1>
+  <form action="{% url 'add_task' %}" method="post">
+    {% csrf_token %}
+    <!-- {{ form.as_p }} -->
+    <div class="mb-3">
+      <label for="id_title" class="form-label">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="id_title"
+        name="title"
+        placeholder="Example"
+      />
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value="on"
+        id="flexCheckDefault"
+        name="completed"
+      />
+      <label class="form-check-label" for="flexCheckDefault"> Completed </label>
+    </div>
+    <button class="btn mt-2 btn-primary" type="submit">Add Task</button>
+  </form>
+
+  <a class="btn mt-2 btn-secondary" href="{% url 'task_list' %}"
+    >Back to Task List</a
+  >
+</div>
+
+{% endblock %}

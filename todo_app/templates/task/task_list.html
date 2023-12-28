@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block content %}
+<div class="row mt-4">
+  <h1 class="fst-italic text-center">Task List</h1>
+
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <ul class="list-group">
+      {% for task in tasks %}
+      <li class="list-group-item">
+        {{ task.title }} {% if task.completed %} (Completed) {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}
