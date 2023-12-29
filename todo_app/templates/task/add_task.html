@@ -25,12 +25,13 @@
       />
       <label class="form-check-label" for="flexCheckDefault"> Completed </label>
     </div>
-    <button class="btn mt-2 btn-primary" type="submit">Add Task</button>
+    <div class="col">
+      <button class="btn mt-2 btn-primary" type="submit">Add Task</button>
+      <a class="btn mt-2 btn-secondary" href="{% url 'task_list' %}"
+        >Back to Task List</a
+      >
+    </div>
   </form>
-
-  <a class="btn mt-2 btn-secondary" href="{% url 'task_list' %}"
-    >Back to Task List</a
-  >
 </div>
 
 {% endblock %}

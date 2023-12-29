@@ -7,6 +7,11 @@
       {% for task in tasks %}
       <li class="list-group-item">
         {{ task.title }} {% if task.completed %} (Completed) {% endif %}
+        <div class="col col-lg-2">
+          <a class="btn btn-danger" href="{% url 'delete_task' task.id %}"
+            >Delete</a
+          >
+        </div>
       </li>
       {% endfor %}
     </ul>
