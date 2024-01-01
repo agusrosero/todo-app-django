@@ -4,7 +4,6 @@
   <h1 class="fst-italic mt-4 text-center">Add Task</h1>
   <form action="{% url 'add_task' %}" method="post">
     {% csrf_token %}
-    <!-- {{ form.as_p }} -->
     <div class="mb-3">
       <label for="id_title" class="form-label">Title</label>
       <input type="text" class="form-control" id="id_title" name="title" placeholder="Example" />
