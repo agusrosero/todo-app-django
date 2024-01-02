@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="row mt-4">
+    <h1 class="fst-italic text-center">Edit Task</h1>
+
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <form method="post" action="{% url 'edit_task' task.id %}">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="id_title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="id_title" name="title" placeholder="Example" />
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="on" id="flexCheckDefault" name="completed" />
+                <label class="form-check-label" for="flexCheckDefault"> Completed </label>
+            </div>
+            <div class="col">
+                <button class="btn mt-2 btn-primary" type="submit">Save Changes</button>
+            </div>
+            <a class="btn mt-2 btn-danger" href="{% url 'task_list' %}">Cancel</a>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
