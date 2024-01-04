@@ -8,8 +8,10 @@
       <li class="list-group-item">
         {{ task.title }} {% if task.completed %}
         <span class="badge bg-success rounded-pill m-1">Completed</span> {% endif %}
-        <div class="col col-lg-2 mt-1">
+        <div class="col mt-1">
           <a class="btn btn-primary" href="{% url 'edit_task' task.id %}">Edit</a>
+        </div>
+        <div class="col mt-1">
           <a class="btn btn-danger" href="{% url 'delete_task' task.id %}">Delete</a>
         </div>
       </li>
