@@ -46,7 +46,3 @@ python manage.py runserver
 ```
 
 7. Open your web browser and go to http://localhost:8000/tasks
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
